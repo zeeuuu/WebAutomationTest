@@ -6,11 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseTest {
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
-    protected void getDriver() {
+    protected static void getDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless"); //eksekusi secara headless dimana browser tidak tampil
+        // options.addArguments("--headless"); //eksekusi secara headless dimana browser tidak tampil
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
 
