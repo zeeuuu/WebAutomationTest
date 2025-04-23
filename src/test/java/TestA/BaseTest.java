@@ -10,7 +10,7 @@ public class BaseTest {
 
     protected static void getDriver() {
         ChromeOptions options = new ChromeOptions();
-        // options.addArguments("--headless"); //eksekusi secara headless dimana browser tidak tampil
+        options.addArguments("--headless"); 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
 
